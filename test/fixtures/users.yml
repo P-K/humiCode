@@ -5,8 +5,8 @@
 # below each fixture, per the syntax in the comments below
 #
 one: 
-  first_name: SomeName
-  last_name: SomeOtherName
+  first_name: "SomeName"
+  last_name: "SomeOtherName"
   birthday: 1990-03-04
   marital_status: 0
   social_insurance_number: 123456789
@@ -14,19 +14,28 @@ one:
   preferences: 
 
 two:
-  first_name: SomeName
-  last_name: SomeOtherName
+  first_name: "UserTwo"
+  last_name: "UserTwoLastName"
   birthday: 1990-03-04
   marital_status: 0
-  social_insurance_number: 123456789
+  social_insurance_number: 000555000
   hire_date: 2018-05-02
-  preferences: 
+  preferences: "Getting this to WORK"
 
 bad_user:
-  first_name: SomeName
+  first_name: "Bad"
   last_name: 
   birthday: 1990-03-04
   marital_status: 0
-  social_insurance_number: 123456789
+  social_insurance_number: 123456787
   hire_date: 2018-05-02
   preferences: 
+
+invalid_SIN:
+  first_name: "Peter"
+  last_name: "Jackson"
+  birthday: 2000-07-08
+  marital_status: 0
+  social_insurance_number: 199
+  hire_date: 2018-09-09
+  preferences:

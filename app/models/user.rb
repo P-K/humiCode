@@ -4,18 +4,25 @@ class User < ApplicationRecord
 	validates :last_name, presence: true
 	validates :birthday, presence: true
 	validates :marital_status, presence: true
-	validates :social_insurance_number, presence: true
+	# Each employee will have a unique, 9 digit social insurance number
+	validates :social_insurance_number, :presence => true, :uniqueness => true, :format => {with: /[0-9]{9}/}
 	validates :hire_date, presence: true
 
 	# create record of new employee
-	def create_user_entry(first_name, last_name, birthday, marital_status, social_insurance_number, hire_date)
-		u = User.create(first_name: first_name,
-						last_name: last_name,
-						birthday: birthday,
-						marital_status: marital_status,
-						social_insurance_number: social_insurance_number,
-						hire_date: hire_date)
-		u.save # save created user to database
+	def create_user_entry(first_name, last_name, birthday, marital_status, social_insurance_number, hire_date, preferences)
+
+		self.first_name = first_name
+		self.last_name = last_name
+		self.birthday = birthday
+		self.marital_status = marital_status
+		self.social_insurance_number = social_insurance_number
+		self.hire_date = hire_date
+		self.preferences = preferences
+
+		# check is the object is valid per defined validation rules
+		if self.valid? then
+			self.save
+		end
 	end
 
 	### Read Methods ###
