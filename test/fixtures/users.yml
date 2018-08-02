@@ -21,3 +21,12 @@ two:
   social_insurance_number: 123456789
   hire_date: 2018-05-02
   preferences: 
+
+bad_user:
+  first_name: SomeName
+  last_name: 
+  birthday: 1990-03-04
+  marital_status: 0
+  social_insurance_number: 123456789
+  hire_date: 2018-05-02
+  preferences: 
