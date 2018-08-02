@@ -4,6 +4,9 @@ class User < ApplicationRecord
 	validates :last_name, presence: true
 	validates :birthday, presence: true
 	validates :marital_status, presence: true
+	# Could add line for enumerating marital status (corresponds to 0, 1, 2, 3):
+	# enum marital_status: [:unmarried, :married, :divorced, :separated]
+
 	# Each employee will have a unique, 9 digit social insurance number
 	validates :social_insurance_number, :presence => true, :uniqueness => true, :format => {with: /[0-9]{9}/}
 	validates :hire_date, presence: true
