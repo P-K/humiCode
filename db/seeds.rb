@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#Populate database with Role information 
+Role.create(name: "employee", editCompensation: false, accessRecords:false)
+Role.create(name: "admin", editCompensation: true, accessRecords:true)
