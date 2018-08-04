@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_01_012221) do
+ActiveRecord::Schema.define(version: 2018_08_03_234549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "roles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.boolean "editCompensation", default: false
+    t.boolean "accessRecords", default: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -22,9 +30,10 @@ ActiveRecord::Schema.define(version: 2018_08_01_012221) do
     t.string "last_name"
     t.date "birthday"
     t.integer "marital_status"
-    t.integer "social_insurance_number"
+    t.bigint "social_insurance_number"
     t.date "hire_date"
     t.text "preferences"
+    t.integer "roleID"
   end
 
 end
