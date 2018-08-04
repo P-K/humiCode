@@ -39,25 +39,30 @@ class User < ApplicationRecord
 	# find all users with a certain first name
 	def fetch_users_by_firstname(first_name)
 		users = User.find_by(first_name: 'first_name')
+		return users
 	end
 
 	# find all users with a certain last name
 	def fetch_users_by_lastname(last_name)
 		users = User.find_by(last_name: 'last_name')
+		return users
 	end
 
 	# find all users with a certain birthday
 	def fetch_users_by_birthday(birthday)
 		users = User.find_by(birthday: 'birthday')
+		return users
 	end
 
 	# find user with a particular SIN
 	def fetch_users_by_SIN(social_insurance_number)
 		user = User.find_by(social_insurance_number: 'social_insurance_number')
+		return user
 	end
 
 	# find all users with a particular hire date
 	def fetch_users_by_hire_date(hire_date)
 		user = User.find_by(hire_date: 'hire_date')
+		return user
 	end
 end
