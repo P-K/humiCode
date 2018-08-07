@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+	belongs_to :role
+
 	# need these fields for employees 
 	validates :first_name, presence: true
 	validates :last_name, presence: true

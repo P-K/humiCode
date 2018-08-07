@@ -44,6 +44,7 @@ class UserTest < ActiveSupport::TestCase
 		assert_equal false, users(:one).valid?
 	end
 
+	# TESTS BELOW DO NOT WORK CORRECTLY
 	# Test create method (these tests are unreliable and throwing errors)
 	# Need to investigate as functionality works well in rails console
 	test "user shouldn't save without necessary info" do

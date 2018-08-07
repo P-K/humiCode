@@ -8,5 +8,7 @@
 
 
 #Populate database with Role information 
-Role.create(name: "employee", editCompensation: false, accessRecords:false)
-Role.create(name: "admin", editCompensation: true, accessRecords:true)
+# r1 = Role.new(id: 0, name: "employee", editCompensation: false, accessRecords:false)
+# r2 = Role.new(id: 1, name: "admin", editCompensation: true, accessRecords:true)
+# r1.save!
+# r2.save!
